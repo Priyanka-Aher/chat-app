@@ -1,0 +1,177 @@
+//@use "./stylesheets/vars" as vars;
+
+$default-page-height: 100vh; // how does this work? 
+
+// variables defining colors
+$default-red: #ff2740;
+$default-white: #fff;
+$default-black: #000;
+$default-light-gray: #e7e7eb;
+$default-dark-gray: #808080;
+
+// variables defining font
+$login-page-font-size: 15px;
+$login-page-font-family: Arial, Helvetica, sans-serif;
+
+
+// Login Page Specific classes
+.login {
+    &-layout {
+      display: grid; 
+      align-items: center;
+      justify-content: center;
+      min-height: $default-page-height;  
+    }
+
+    &-container 
+    {
+      display: grid; 
+    } 
+
+    &-button {
+      background-color: $default-red;
+      color: $default-white;
+      padding: 0.8em 4.5em;
+      text-decoration: none;
+      border-radius: 0.4em;
+      font-family: $login-page-font-family;
+      font-size: $login-page-font-size;
+    }
+
+    &-input {
+      border: 2px solid $default-light-gray;
+      color: $default-dark-gray;
+      padding: 0.8em 4.5em;
+      border-radius: 0.4em;
+      font-family: $login-page-font-family;
+      text-align: center;
+      font-size: $login-page-font-size;
+    }
+
+    &-input:focus {
+      outline: none;
+    }
+  }
+
+// Chat Page Specific classes  
+.chat-page-layout {
+  width: 100%;
+  min-height: $default-page-height;
+  display: grid;
+  grid-template-columns: 25% auto;
+  font-family: $login-page-font-family;
+}  
+
+.rooms-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $default-red;
+}
+
+.sidebar-container {
+  display: grid;
+  grid-template-rows: 12% auto;
+  background-color: $default-red;
+}
+
+.room-buttons {
+  text-align: left;
+  padding: 16px 28px 16px 28px; // t r b l
+  text-decoration: none;
+}
+
+.user-info-container {
+  padding: 28px;
+  
+}
+
+// Toolkit classes 
+.margin {
+  &-bottom-one {
+    margin-bottom: 4px;
+  }
+  &-bottom-two {
+    margin-bottom: 8px;
+  }
+  &-bottom-three {
+    margin-bottom: 12px;
+  }
+}
+
+.text-color {
+  &-red {
+    color: $default-red;
+  }
+  &-white {
+    color: $default-white;
+  }
+  &-black {
+    color: $default-black;
+  }
+  &-light-gray {
+    color: $default-light-gray;
+  }
+  &-dark-gray {
+    color: $default-dark-gray;
+  }
+}
+
+.background-color {
+  &-red {
+    background-color: $default-red;
+  }
+  &-white {
+    background-color: $default-white;
+  }
+  &-black {
+    background-color: $default-black;
+  }
+  &-light-gray {
+    background-color: $default-light-gray;
+  }
+  &-dark-gray {
+    background-color: $default-dark-gray;
+  }
+}
+
+.border-theme {
+  &-no-border {
+    border: none;
+  }
+}
+
+.text-size {
+  &-100 {
+    font-size: 12px;
+  }
+  &-200 {
+    font-size: 16px;
+  }
+  &-300 {
+    font-size: 20px;
+  }
+  &-400 {
+    font-size: 24px;
+  }
+  &-500 {
+    font-size: 28px;
+  }
+  &-600 {
+    font-size: 32px;
+  }
+  &-700 {
+    font-size: 36px;
+  }
+  &-800 {
+    font-size: 40px;
+  }
+}
+
+.text-font-weight {
+  &-bold {
+    font-weight: bold;
+  }
+  &-bolder {
+    font-weight: bolder;
+  }
+}
