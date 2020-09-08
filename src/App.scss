@@ -7,7 +7,7 @@ $default-red: #ff2740;
 $default-white: #fff;
 $default-black: #000;
 $default-light-gray: #e7e7eb;
-$default-dark-gray: #474040;//#808080;
+$default-dark-gray: #747070;//#808080;
 
 // variables defining font
 $login-page-font-size: 15px;
@@ -108,7 +108,7 @@ body {
 
 .main-body {
   display: grid;
-  grid-template-rows: 15% auto 10%;
+  grid-template-rows: 15vh 75vh 10vh;
 }
 
 .user-info-container {
@@ -120,7 +120,7 @@ body {
 
 .footer-container {
   display: flex;
-  column-gap: 15px;
+  grid-column-gap: 15px;
   padding: 18px;
 
   input {
@@ -129,11 +129,9 @@ body {
 }
 
 .header {
-
   &-container {
     display: grid;
-    //grid-template-rows: 100% 100%;
-    padding: 36px;//8.5vw;
+    padding: 36px;
     text-align: center;
     row-gap: 15px;
     color: $default-dark-gray;
@@ -150,6 +148,10 @@ body {
 
 .messages-container {
   background-color: $default-light-gray;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: inherit;
 }
 
 .message-instance {
@@ -158,13 +160,23 @@ body {
   padding: 15px;
 
   &-content {
-    background-color: white;
     padding: 10px;
     border: 1px $default-white solid;
     border-radius: 20px;
     width: fit-content;
     font-size: 16px;
-    color: $default-dark-gray;
+    
+    &-otherMessage {
+      background-color: $default-white;
+      color: $default-dark-gray;
+      justify-content: flex-start;
+    }
+
+    &-myMessage {
+      background-color: $default-red;
+      color: $default-white;
+      justify-content: flex-end;
+    }
 
     @include for-phone-only {  // mobile
       font-size: 12px;
@@ -283,3 +295,13 @@ body {
     font-weight: bolder;
   }
 }
+
+.justify-content {
+  &-start {
+    justify-content: flex-start;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+}
+

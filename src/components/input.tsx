@@ -8,10 +8,11 @@ interface InputProps {
     className?: string;
     maxLength?: number;
     ref?: any;
+    onBlur?: (event: any) => void;
 }
 
 export const InputField: React.FunctionComponent<InputProps> =
-    ({ placeholder = " ", name, type = "text", className, maxLength, ref }) => {
+    ({ placeholder = " ", name, type = "text", className, maxLength, ref, onBlur }) => {
 
         return (
             <input
@@ -21,6 +22,7 @@ export const InputField: React.FunctionComponent<InputProps> =
                 className={className}
                 maxLength={maxLength}
                 ref={ref}
+                onBlur={onBlur}
             />
         );
     }
