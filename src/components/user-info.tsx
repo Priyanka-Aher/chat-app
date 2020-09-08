@@ -10,13 +10,11 @@ interface UserInfoContainerProps {
  */
 export const UserInfoContainer : React.FunctionComponent<UserInfoContainerProps> = ({username}) => {
 
-    const className = " text-size-400 text-color-white user-info-container";
-
-
+    const className = "user-info-container text-size-400 text-color-white ";
 
     return (
-        <>
-            <span className={className}>{username}</span>
-        </>
+        <div className={className}>
+            <span>{username}</span>
+        </div>
     );
 }
