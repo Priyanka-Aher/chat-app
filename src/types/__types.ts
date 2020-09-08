@@ -1,9 +1,9 @@
-export interface RoomsData {
+export interface Room {
     name: string;
     id: number;
 }
 
-export interface Messages {
+export interface Message {
     name: string;
     message: string;
     id: string;

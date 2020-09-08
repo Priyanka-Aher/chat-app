@@ -13,12 +13,6 @@ export const Login: React.FunctionComponent = (props) => {
         const form = formRef.current;
         const username = form?.['username-input']?.value;
     
-        // console.log(`${username}`);
-        // // CHECK IF THIS SHOULD NOT BE ON WINDOW and on the state? 
-        // (window as any).chatAppUsername = username;
-        // console.log(`window.chatAppUsername is ${(window as any).chatAppUsername}`);
-        // window.location.href="/chat";
-
         setUsername(username);
         setGotoChatRoom(true);
     };
